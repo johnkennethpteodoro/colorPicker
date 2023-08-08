@@ -19,13 +19,14 @@
 		background: #555;
 	}
 	.btn {
-		padding: 30px 35px;
+		width: 80px;
+		height: 80px;
 		border-radius: 14px;
-		font-size: 12px;
-		background: gray;
+		font-size: 16px;
+		font-weight: bold;
 		border: none;
 		&:hover {
-			background: darkgray;
+			filter: brightness(0.9);
 		}
 	}
 	.colorName {
@@ -35,11 +36,25 @@
 
 .boxColor {
 	height: 350px;
+	width: 100%;
 	border-radius: 12px;
+	background: inherit;
+	& > div {
+		background: inherit;
+	}
 	.colorName {
-		font-size: 22px;
+		font-size: 25px;
+		width: 100%;
 	}
 	h6 {
 		text-align: center;
 	}
+}
+
+.colorInvert {
+	background: inherit; //minana yung bgc sa parent
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	filter: invert(1) grayscale(1) contrast(360); //maglalaro yung kulay na minana sa parent
 }

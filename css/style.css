@@ -17,14 +17,15 @@
   background: #555;
 }
 .colorPicker .btn {
-  padding: 30px 35px;
+  width: 80px;
+  height: 80px;
   border-radius: 14px;
-  font-size: 12px;
-  background: gray;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
 }
 .colorPicker .btn:hover {
-  background: darkgray;
+  filter: brightness(0.9);
 }
 .colorPicker .colorName {
   font-size: 12px;
@@ -32,11 +33,25 @@
 
 .boxColor {
   height: 350px;
+  width: 100%;
   border-radius: 12px;
+  background: inherit;
+}
+.boxColor > div {
+  background: inherit;
 }
 .boxColor .colorName {
-  font-size: 22px;
+  font-size: 25px;
+  width: 100%;
 }
 .boxColor h6 {
   text-align: center;
+}
+
+.colorInvert {
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: invert(1) grayscale(1) contrast(360);
 }/*# sourceMappingURL=style.css.map */
