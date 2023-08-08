@@ -1,0 +1,42 @@
+* {
+  text-transform: uppercase;
+}
+
+.colorPicker {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.colorPicker::-webkit-scrollbar {
+  width: 8px;
+}
+.colorPicker::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+.colorPicker::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.colorPicker .btn {
+  padding: 30px 35px;
+  border-radius: 14px;
+  font-size: 12px;
+  background: gray;
+  border: none;
+}
+.colorPicker .btn:hover {
+  background: darkgray;
+}
+.colorPicker .colorName {
+  font-size: 12px;
+}
+
+.boxColor {
+  height: 350px;
+  border-radius: 12px;
+}
+.boxColor .colorName {
+  font-size: 22px;
+}
+.boxColor h6 {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
