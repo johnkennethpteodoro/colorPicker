@@ -5,6 +5,7 @@
 .colorPicker {
 	max-height: 500px;
 	overflow-y: scroll;
+	overflow-x: hidden;
 
 	&::-webkit-scrollbar {
 		width: 8px;
@@ -18,6 +19,7 @@
 	&::-webkit-scrollbar-thumb:hover {
 		background: #555;
 	}
+
 	.btn {
 		width: 80px;
 		height: 80px;
@@ -57,4 +59,10 @@
 	background-clip: text;
 	color: transparent;
 	filter: invert(1) grayscale(1) contrast(360); //maglalaro yung kulay na minana sa parent
+}
+
+@media only screen and (max-width: 767px) {
+	.colorPicker {
+		max-height: 360px;
+	}
 }

@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 
 function App() {
 	const [colors, setColors] = useState([]);
-	const [selectedColor, setSelectedColor] = useState(null);
-
 	const fetchColorData = () => {
 		fetch("https://api.prolook.com/api/colors/prolook")
 			.then((response) => response.json())
@@ -16,6 +14,7 @@ function App() {
 		fetchColorData();
 	}, []);
 
+	const [selectedColor, setSelectedColor] = useState(null);
 	const colorHandle = (color) => {
 		setSelectedColor(color);
 	};
@@ -28,7 +27,7 @@ function App() {
 						{colors.length > 0 && (
 							<div className="row">
 								{colors.map((color) => (
-									<div className="col-sm-3 text-center mb-4" key={color.id}>
+									<div className="col-sm-3 col-4 text-center mb-4" key={color.id}>
 										<button className="btn btn-primary" style={{ backgroundColor: `#${color.hex_code}` }} onClick={() => colorHandle(color)}>
 											<span className="colorInvert">{color.color_code}</span>
 										</button>
@@ -39,7 +38,7 @@ function App() {
 						)}
 					</div>
 					<div className="col-sm-5 mt-5 me-4">
-						<div className="boxColor position-relative" style={{ backgroundColor: selectedColor ? `#${selectedColor.hex_code}` : "#FAFAFA", border: selectedColor ? "none" : "dashed 3px #EEEEEE" }}>
+						<div className="boxColor position-relative" style={{ backgroundColor: selectedColor ? `#${selectedColor.hex_code}` : "#FAFAFA", border: selectedColor ? "none" : "dashed 2px #EEEEEE" }}>
 							<div className="position-absolute top-50 start-50 translate-middle">
 								<h6 className="colorName colorInvert">
 									<span>{selectedColor ? `${selectedColor.color_code} - ${selectedColor.name}` : "PREVIEW"}</span>
