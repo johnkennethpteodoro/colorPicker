@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import ColorPicker from "../src/components/ColorPicker";
+import PreviewColor from "./components/PreviewColor";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [colors, setColors] = useState([]);
+	const [selectedColor, setSelectedColor] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
+
+	const fetchColorData = async () => {
+		try {
+			const response = await fetch("https://api.prolook.com/api/colors/prolook");
+			const data = await response.json();
+			setColors(data.colors);
+		} catch (error) {
+			console.error("Error fetching color data:", error);
+		} finally {
+			setIsLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		fetchColorData();
+	}, []);
+
+	const colorHandle = (color) => {
+		setSelectedColor(color);
+	};
+
+	return (
+		<div className="w-full h-screen gap-0 xl:grid xl:grid-cols-12">
+			<div className="col-span-4">
+				<PreviewColor selectedColor={selectedColor} />
+			</div>
+			<div className="col-span-8 overflow-y-auto bg-black custom-scrollbar">
+				{isLoading ? (
+					<div className="flex items-center justify-center h-screen text-center">
+						<h1 className="text-red-300">loading...</h1>
+					</div>
+				) : (
+					<ColorPicker colors={colors} onColorSelect={colorHandle} />
+				)}
+			</div>
+		</div>
+	);
 }
 
 export default App;

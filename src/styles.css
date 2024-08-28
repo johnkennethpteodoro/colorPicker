@@ -1,0 +1,29 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.colorInvert {
+	background: inherit;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	filter: invert(1) grayscale(1) contrast(360);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+	width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+	background: #020617;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #f59e0b;
+	border-radius: 6px;
+	border: 1px solid black;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background-color: #d97706;
+}
