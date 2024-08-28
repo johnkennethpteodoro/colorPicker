@@ -28,14 +28,16 @@ function App() {
 	};
 
 	return (
-		<div className="w-full h-screen gap-0 xl:grid xl:grid-cols-12">
-			<div className="fixed z-10 w-full xl:static xl:col-span-4">
+		<div className="fixed w-full h-screen gap-0 xl:grid xl:grid-cols-12">
+			<div className="col-span-4">
 				<PreviewColor selectedColor={selectedColor} />
 			</div>
-			<div className="col-span-8 overflow-y-auto bg-black custom-scrollbar">
+			<div className="col-span-8 overflow-y-auto bg-black custom-scrollbar h-[500px] xl:h-screen">
 				{isLoading ? (
 					<div className="flex items-center justify-center h-screen text-center">
-						<h1 className="text-sm font-normal text-white uppercase">loading ...</h1>
+						<h1 className="hidden text-sm font-normal text-white uppercase">
+							loading ...
+						</h1>
 					</div>
 				) : (
 					<ColorPicker colors={colors} onColorSelect={colorHandle} />
