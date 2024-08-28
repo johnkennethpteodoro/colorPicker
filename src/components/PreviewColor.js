@@ -2,7 +2,7 @@ import { FaCopy } from "react-icons/fa";
 function PreviewColor({ selectedColor }) {
 	const handleCopyColorCode = (hexCode) => {
 		navigator.clipboard
-			.writeText(hexCode)
+			.writeText(`#${hexCode}`)
 			.then(() => {
 				console.log("Color code copied to clipboard:", hexCode);
 			})
@@ -12,7 +12,7 @@ function PreviewColor({ selectedColor }) {
 	};
 	return (
 		<div
-			className="border-b border-gray-500 shadow-lg xl:border-gray-500 xl:h-screen h-72 xl:border-r shadow-gray-600"
+			className="border-b border-gray-500 xl:border-gray-500 xl:h-screen h-72 xl:border-r "
 			style={{
 				backgroundColor: selectedColor ? `#${selectedColor.hex_code}` : "#FAFAFA",
 			}}
@@ -27,7 +27,7 @@ function PreviewColor({ selectedColor }) {
 								: "#FAFAFA",
 						}}
 					>
-						<span>
+						<span className="">
 							{selectedColor
 								? `${selectedColor.color_code} - ${selectedColor.name}`
 								: "PREVIEW"}
