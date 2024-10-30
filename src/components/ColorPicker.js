@@ -5,7 +5,7 @@ function ColorPicker({ colors, onColorSelect }) {
 		<>
 			<div>
 				{colors.length > 0 && (
-					<div className="grid grid-cols-3 xl:grid xl:grid-cols-5">
+					<div className="grid grid-cols-3 gap-1 xl:pt-1 xl:grid xl:grid-cols-5">
 						{colors.map((color) => (
 							<div key={color.id}>
 								<button

@@ -29,10 +29,10 @@ function App() {
 
 	return (
 		<div className="fixed w-full h-screen gap-0 xl:grid xl:grid-cols-12">
-			<div className="col-span-4">
+			<div className="col-span-4 p-1">
 				<PreviewColor selectedColor={selectedColor} />
 			</div>
-			<div className="col-span-8 overflow-y-auto bg-black custom-scrollbar h-[500px] xl:h-screen">
+			<div className="col-span-8 overflow-y-auto bg-gray-50 custom-scrollbar h-[700px] xl:h-screen">
 				{isLoading ? (
 					<div className="flex items-center justify-center h-screen text-center">
 						<h1 className="hidden text-sm font-normal text-white uppercase">
