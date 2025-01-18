@@ -1,6 +1,6 @@
 # Color Picker
 
-A web application that allows users to select colors and retrieve additional color data (such as complementary colors, shades) from an external API. This tool is useful for designers and developers working with various color schemes in real-time.
+Color Picker allows users to select colors and retrieve additional color data (such as HEX code, color name) from an external API. This tool is useful for designers and developers working with various color schemes in real-time.
 
 ## Features
 - **Color Selection**: Choose colors using a color picker interface.
