@@ -1,6 +1,5 @@
 # Color Picker
 
-## Project Overview
 A web application that allows users to select colors and retrieve additional color data (such as complementary colors, shades) from an external API. This tool is useful for designers and developers working with various color schemes in real-time.
 
 ## Features
