@@ -8,7 +8,6 @@ A web application that allows users to select colors and retrieve additional col
 - **Format Display**: View the selected color in HEX, RGB, and HSL formats.
 - **Real-Time Update**: The UI updates in real-time as the user selects different colors.
 
-### `npm start`
 
 ## Installation
 
