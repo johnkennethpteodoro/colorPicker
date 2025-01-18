@@ -4,7 +4,7 @@ Color Picker allows users to select colors and retrieve additional color data (s
 
 ## Features
 - **Color Selection**: Choose colors using a color picker interface.
-- **API Integration**: Fetch additional color data from an external API.
+- **API Integration**: Fetch color data from an external API.
 - **Format Display**: View the selected color in HEX, RGB, and HSL formats.
 - **Real-Time Update**: The UI updates in real-time as the user selects different colors.
 
