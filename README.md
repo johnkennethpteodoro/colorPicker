@@ -18,5 +18,5 @@ A web application that allows users to select colors and retrieve additional col
 
 2. Install the dependencies:
    ```bash
-   Run npm install
+   npm install
 
