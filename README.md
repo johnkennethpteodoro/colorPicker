@@ -19,7 +19,7 @@ A web application that allows users to select colors and retrieve additional col
    cd color-picker
 
 2. Install the dependencies:
-3. 
+   
    ```bash
    npm install
 
