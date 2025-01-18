@@ -11,7 +11,7 @@ Color Picker allows users to select colors and retrieve additional color data (s
 ## Technologies Used
 - **React**: A powerful JavaScript library for building user interfaces, enabling fast and dynamic updates.
 - **Tailwind CSS**: A utility-first CSS framework that allows for rapid design and responsive layouts.
-- **REST API**: Integrates with an external REST API to retrieve color data..
+- **REST API**: Integrates with an external REST API to retrieve color data.
 
 ## Installation
 
